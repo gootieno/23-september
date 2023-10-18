@@ -12,27 +12,37 @@ html, body, div {
 
     /* Phase 1 */
     /* Your code here */
+    display: grid;
+    grid-template-columns: 3fr max-content 1fr;
+    grid-template-areas: 
+    "header header header"
+    "main . sidebar"
+    "footer footer footer";
 
     /* Bonus Phase */
     /* Your code here */
+    gap: 15px 0px;
 }
 .item-1 {
     background-color: #87a7b3; /* steel blue */
 
     /* Phase 1 */
     /* Your code here */
+    grid-area: header;
 }
 .item-2 {
     background-color: #e1f1dd; /* light sea green */
 
     /* Phase 1 */
     /* Your code here */
+    grid-area: main;
 }
 .item-3 {
     background-color: #cdc7be; /* grey */
 
     /* Phase 1 */
     /* Your code here */
+    grid-area: sidebar;
 }
 .item-4 {
     background-color: #766161; /* brown */
@@ -40,6 +50,7 @@ html, body, div {
 
     /* Phase 1 */
     /* Your code here */
+    grid-area: footer;
 }
 
 .divider {
@@ -47,6 +58,7 @@ html, body, div {
 
     /* Bonus Phase */
     /* Your code here */
+    width: 60px;
 }
 
 /* ====== */
@@ -57,4 +69,26 @@ html, body, div {
 
     /* Phase 2 */
     /* Your code here */
+    display: inline-grid;
+    /* display: grid; */
+    grid-auto-flow: column;
+
+    /* grid-template-rows: repeat(3, 33.3%); */
+    grid-template-columns: repeat(6, 100px);
+    grid-template-rows: repeat(3, 50px);
+    place-items: center;
+
+    /* justify-content: space-around;
+    align-items: center; */
+}
+
+
+@media screen and (min-width: 500px) and (max-width: 1000px){
+    .grid-container {
+        border: 3px solid red;
+    }
+
+    .item-4{
+        display: none;
+    }
 }
