@@ -1,39 +1,47 @@
 #parent {
     border: 4px solid blue;
 
-    height: 600px;
+    height: 1200px;
     width: 100%;
 
-    display: flex;
+   
     /* justify-content: center; */
+    display: grid;
+
+    grid-template-columns: 20% auto 20%;
+    grid-template-areas: 
+    "one one one"
+    "two two ."
+    "three three three"
+    /* "" */
 }
 
-.child {
+.one {
     border: 3px solid purple;
-
+    background-color:  purple;
     height: 300px;
-    width: 100%;
+    /* width: 300px; */
+    grid-area: one;
+}
+
+.two {
+    border: 3px solid red;
+    background-color: red;
+    height: 300px;
+    /* width: 300px; */
+    grid-area: two;
+}
+.three {
+    border: 3px solid green;
+    background-color: green;
+    height: 300px;
+    /* width: 300px; */
+    grid-area: three;
 
     display: flex;
     justify-content: center;
 }
 
-.child > .one{
-    border: 3px solid red;
-
-    /* width: 50px; */
-    /* height: 1000px; */
-    flex-basis: 10%;
-    flex-grow: 1;
-    flex-shrink: 1;
-}
-
-.child > .two {
-    border: 3px solid red;
-    display: flex;
-    /* justify-content: center; */
-    align-items: center;
-    flex-basis: 10%;
-    flex-grow: 2;
-    flex-shrink: 1;
+.child {
+    border: 2px solid red;
 }
