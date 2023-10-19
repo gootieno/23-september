@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="index.css" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+   <header id="header-container">
+        <img id="header-logo" src='./medium-logo.svg' alt="logo">
+        <nav id="navigation-container">
+            <a class="nav-links" href="#">Our Story</a>
+            <a class="nav-links" href="#">Membership</a>
+            <a class="nav-links" href="#">Write</a>
+            <a class="nav-links" href="#">Sign In</a>
+            <a class="nav-links nav-button" href="#">Get Started</a>
+        </nav>
+   </header>
+
+   <div id="reading-container">
+        <div id="discover-container">
+            <h1 class="discover-text">Stay Curious</h1>
+            <p class="discover-text">Discover stories, thinking, and expertise from writers on any topic.</p>
+            <a class="discover-link nav-button">Start Reading</a>
+        </div>
+
+        <div id="m-container">
+            
+        </div>
+   </div>
+   <script>
+        const mContainer = document.getElementById('m-container');
+        for(let i= 0; i < 500; i++){
+            const span = document.createElement('span')
+            span.innerText = 'M'
+            mContainer.appendChild(span)
+        }
+   </script>
+</body>
+</html>
