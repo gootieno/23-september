@@ -33,13 +33,25 @@ body {
 
 #search-container {
     box-shadow:  3px 3px 5px var(--button-border-color);
-    padding: 5px 10px;
+    padding: 10px 10px;
     padding-right: 25px;
     background-color: white;
 }
 
 .search-input {
     border: none;
+}
+
+#search-container:hover {
+    box-shadow: 3px 3px 5px var(--app-orange);
+}
+
+#search-container:hover > .search-icon {
+    color: var(--app-orange);
+}
+
+.search-input:focus {
+    outline: none;
 }
 
 
@@ -71,11 +83,19 @@ body {
     border: 1px solid var(--button-border-color);
     box-shadow: 2px 2px 5px var(--button-border-color);
     padding: 10px 70px;
-    width: 20%;
+    width: 25%;
     display: flex;
     justify-content: center;
     gap: 4px;
+    cursor: pointer;
 }
+
+.categories:hover {
+    color: var(--app-orange);
+    border-color: var(--app-orange);
+    box-shadow: 2px 2px 5px var(--app-orange);
+}
+
 
 /* events */
 #event-section {
@@ -113,6 +133,10 @@ body {
     padding: 10px 20px;
 }
 
+.event-title:hover {
+    color: var(--app-orange);
+}
+
 .event-date {
     padding: 5px 20px;
 }
@@ -127,24 +151,61 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 20px 10px 10px;
 }
 
 #footer-button {
     /* margin: 0 auto; */
-    border: var(--button-border-color);
+    border: 1px solid var(--button-border-color);
     box-shadow: 2px 2px 5px var(--button-border-color);
     width: fit-content;
     padding: 15px 110px;
     margin-bottom: 20px;
+    cursor: pointer;
+}
+
+#footer-button:hover {
+    color: var(--app-orange);
+    border-color: var(--app-orange);
+    box-shadow: 2px 2px 5px var(--app-orange);
 }
 
 #footer {
-    margin: 20px 10px;
     /* text-align: end; */
 
     display: flex;
     width: 100%;
     justify-content: flex-end;
 
-    padding-right: 10px;
+    padding: 25px 10px;
+    color: var(--app-white);
+    background-color: var(--app-purple);
+}
+
+@media screen and (max-width: 700px){
+    #header-container {
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    #category-container {
+        flex-direction: column;
+    }
+
+    .categories {
+        width: 100%;
+    }
+
+    .events {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .event-image {
+        height: 400px;
+    }
+
+    .event-title, .event-date {
+        text-align: center;
+    }
 }
