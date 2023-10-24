@@ -89,6 +89,20 @@ const server = http.createServer((req, res) => {
     // Phase 1: GET /dogs
     if (req.method === 'GET' && req.url === '/dogs') {
       // Your code here
+
+      // get the html page
+
+      // create a variable for holding dog names as list items
+      /*
+      const cats = ['fido', 'fluffy']
+      const catsLi = ""
+      for(const cat of cats){
+        catsLi += `<li>${cat}</li>
+      }
+      */
+
+     // create response body with the replaced #{dogsList} value as catsLi
+     // everything else stays the same
     }
 
     // Phase 2: GET /dogs/new
