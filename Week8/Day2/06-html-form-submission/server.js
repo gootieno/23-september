@@ -58,8 +58,8 @@ const server = http.createServer((req, res) => {
         <div>
           <h2>Created Dog:</h2>
           <h3>Name: ${dog.name}</h3>
-          <div>Pattern: ${dog.color}</div>
-          <div>Size: ${dog.age} years old</div>
+          <div>Color: ${dog.color}</div>
+          <div>Age: ${dog.age} years old</div>
           <div>Description: ${dog.description}</div>
         </div>
       ` : "<div>No dog created yet!</div>");
@@ -107,6 +107,11 @@ const server = http.createServer((req, res) => {
     }
 
     // Your code here
+    /*
+    let cat
+    const Cat = require('./cat')
+    req.body
+    */
 
     res.statusCode = 404;
     res.end("Page Not Found");
