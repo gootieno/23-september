@@ -11,8 +11,6 @@ Paste your code for fetch requests here once you finish each task.
 
 // Your code here
 
-
-
 /* =============================== Phase 2 ================================ */
 /*
   Make a request with fetch request to POST /posts and print the response
@@ -20,3 +18,10 @@ Paste your code for fetch requests here once you finish each task.
 */
 
 // Your code here
+const getPosts = async () => {
+  return fetch("/posts")
+    .then((res) => res.json())
+    .then((resBody) => console.log(resBody));
+};
+
+getPosts();
