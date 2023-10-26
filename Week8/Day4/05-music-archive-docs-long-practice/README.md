@@ -100,17 +100,29 @@ Test this in Postman or by using `fetch` in the browser.
 
 Request components:
 
-- Method:
-- URL:
-- Headers:
-- Body:
+- Method: GET
+- URL: /artists/:artistId
+- Headers: none
+- Body:none
 
 Response components:
 
-- Status code:
-- Headers:
-- Body:
-
+- Status code: 200
+- Headers: {'Content-Type': application/json'}
+- Body: 
+```json
+{
+    "name": "Red Hot Chili Peppers",
+    "artistId": 1,
+    "albums": [
+        {
+            "name": "Stadium Arcadium",
+            "albumId": 1,
+            "artistId": 1
+        }
+    ]
+}
+```
 ### Add an artist
 
 Request components:
@@ -274,6 +286,8 @@ endpoints? What information was that resource constrained by for each of those
 endpoints? Now think about getting all songs by a specific `trackNumber`.
 What is the resource you want to get? What information is the resource
 constrained by for this endpoint?
+
+track ex: /trackNumbers/3/songs
 
 Request components:
 
