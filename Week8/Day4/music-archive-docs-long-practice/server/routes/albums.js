@@ -9,7 +9,7 @@ const { NotFoundError, BodyError } = require('../errors');
 router.get('/artists/:artistId/albums', asyncHandler(async (req, res) => {
   const { artistId } = req.params;
 
-  const artist = await db.Artist.findByPk(artistId);
+  const artist = await db.Album.findByPk(artistId);
   if (!artist) throw new NotFoundError('Artist not found');
 
   const albums = await db.Album.findAllByArtistId(artistId);
