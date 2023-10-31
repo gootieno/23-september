@@ -3,5 +3,5 @@ import nodes from './node-list.js'
 
 window.onload = () => {
   elements();
-  nodes();
+  // nodes();
 };
