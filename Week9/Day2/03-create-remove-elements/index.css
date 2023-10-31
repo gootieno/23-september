@@ -51,3 +51,8 @@
     font-size: 1.25rem;
 }
 
+.darkMode {
+    background-color: rgb(20, 0, 36);
+    color: white;
+}
+
